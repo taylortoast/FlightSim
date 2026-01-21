@@ -20,6 +20,10 @@ public class NavAutopilot : MonoBehaviour
     public float maxInterceptDeg = 30f;
     public float xtkToInterceptDeg = 0.02f; // deg per meter (tune)
 
+    [Header("Mode")]
+    public bool navEngaged = false; // when true, NAV drives targetHeading
+
+
 
 
     void Awake()
@@ -64,7 +68,10 @@ public class NavAutopilot : MonoBehaviour
 
         float desiredHeading = (courseHdg - intercept + 360f) % 360f;
 
-        targets.targetHeading = desiredHeading;
+        // targets.targetHeading = desiredHeading;
+        if (navEngaged)
+            targets.targetHeading = desiredHeading;
+
 
         // --- SMART WAYPOINT CAPTURE ---
         Vector3 forward = aircraft.forward;
@@ -86,6 +93,19 @@ public class NavAutopilot : MonoBehaviour
 
         Debug.DrawLine(aircraft.position, wp.position, Color.yellow);
     }
+
+    public void SetNavEngaged(bool on)
+    {
+        navEngaged = on;
+
+        // When disengaging NAV, freeze the target to current heading
+        // so we don’t “snap back” to some old value.
+        if (!navEngaged && targets && aircraft)
+            targets.targetHeading = aircraft.eulerAngles.y;
+    }
+
+    public void ToggleNav() => SetNavEngaged(!navEngaged);
+
 
 
 }
