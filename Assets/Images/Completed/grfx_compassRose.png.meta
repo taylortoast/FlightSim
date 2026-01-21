@@ -1,0 +1,2483 @@
+fileFormatVersion: 2
+guid: 0be211913be42b144b2de68c1cf50803
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4220259418222361693
+    second: grfx_compassRose_0
+  - first:
+      213: 843197621637977151
+    second: grfx_compassRose_1
+  - first:
+      213: 1755586777336164148
+    second: grfx_compassRose_2
+  - first:
+      213: -4833121065995029086
+    second: grfx_compassRose_3
+  - first:
+      213: -1587910661779762259
+    second: grfx_compassRose_4
+  - first:
+      213: -9061741668933321351
+    second: grfx_compassRose_5
+  - first:
+      213: -3553156286461772008
+    second: grfx_compassRose_6
+  - first:
+      213: -434207506783342581
+    second: grfx_compassRose_7
+  - first:
+      213: 3182890626376861610
+    second: grfx_compassRose_8
+  - first:
+      213: -70661091529801430
+    second: grfx_compassRose_9
+  - first:
+      213: -1505164560020052343
+    second: grfx_compassRose_10
+  - first:
+      213: 7201569607627610468
+    second: grfx_compassRose_11
+  - first:
+      213: 8964523734009034117
+    second: grfx_compassRose_12
+  - first:
+      213: -8965211876053351075
+    second: grfx_compassRose_13
+  - first:
+      213: -1558770016085245625
+    second: grfx_compassRose_14
+  - first:
+      213: 3313925224905568253
+    second: grfx_compassRose_15
+  - first:
+      213: 2465199273740314570
+    second: grfx_compassRose_16
+  - first:
+      213: 7240923296563493689
+    second: grfx_compassRose_17
+  - first:
+      213: -5863113482107093050
+    second: grfx_compassRose_18
+  - first:
+      213: 7272881491616726942
+    second: grfx_compassRose_19
+  - first:
+      213: 8001534449148095990
+    second: grfx_compassRose_20
+  - first:
+      213: -1025267810986035081
+    second: grfx_compassRose_21
+  - first:
+      213: -2741431849451671881
+    second: grfx_compassRose_22
+  - first:
+      213: -4752777059040831142
+    second: grfx_compassRose_23
+  - first:
+      213: 1521536031284561426
+    second: grfx_compassRose_24
+  - first:
+      213: 8809837759723715395
+    second: grfx_compassRose_25
+  - first:
+      213: -4143873449411990080
+    second: grfx_compassRose_26
+  - first:
+      213: -5031089500988606530
+    second: grfx_compassRose_27
+  - first:
+      213: -8019547101933238211
+    second: grfx_compassRose_28
+  - first:
+      213: 3563355943386624785
+    second: grfx_compassRose_29
+  - first:
+      213: -3067895842702881886
+    second: grfx_compassRose_30
+  - first:
+      213: 797587637955107846
+    second: grfx_compassRose_31
+  - first:
+      213: -6946557247119881366
+    second: grfx_compassRose_32
+  - first:
+      213: -9221702685408185673
+    second: grfx_compassRose_33
+  - first:
+      213: 322525175144056683
+    second: grfx_compassRose_34
+  - first:
+      213: 1007946089874991511
+    second: grfx_compassRose_35
+  - first:
+      213: -4512608352638051566
+    second: grfx_compassRose_36
+  - first:
+      213: -2038758940931187763
+    second: grfx_compassRose_37
+  - first:
+      213: -2891878277912259458
+    second: grfx_compassRose_38
+  - first:
+      213: 3501338057299747180
+    second: grfx_compassRose_39
+  - first:
+      213: 3583619258551986120
+    second: grfx_compassRose_40
+  - first:
+      213: -4158119697891464722
+    second: grfx_compassRose_41
+  - first:
+      213: 6691343375184068408
+    second: grfx_compassRose_42
+  - first:
+      213: 6702686584214038464
+    second: grfx_compassRose_43
+  - first:
+      213: -2126581293572812553
+    second: grfx_compassRose_44
+  - first:
+      213: -8004757814292672988
+    second: grfx_compassRose_45
+  - first:
+      213: -6856877583918164400
+    second: grfx_compassRose_46
+  - first:
+      213: 6580369626202251252
+    second: grfx_compassRose_47
+  - first:
+      213: 5163268877806054301
+    second: grfx_compassRose_48
+  - first:
+      213: -6500075990784672073
+    second: grfx_compassRose_49
+  - first:
+      213: -5177768864223333976
+    second: grfx_compassRose_50
+  - first:
+      213: 6658078966896402273
+    second: grfx_compassRose_51
+  - first:
+      213: 1133743818618135207
+    second: grfx_compassRose_52
+  - first:
+      213: -736064641884568717
+    second: grfx_compassRose_53
+  - first:
+      213: 399203895586351212
+    second: grfx_compassRose_54
+  - first:
+      213: -6600655863876860100
+    second: grfx_compassRose_55
+  - first:
+      213: -6757032332175889574
+    second: grfx_compassRose_56
+  - first:
+      213: -9215440579533806816
+    second: grfx_compassRose_57
+  - first:
+      213: -4448700546985023216
+    second: grfx_compassRose_58
+  - first:
+      213: -8305681348713896551
+    second: grfx_compassRose_59
+  - first:
+      213: -2974874804246545900
+    second: grfx_compassRose_60
+  - first:
+      213: 2870215509885258346
+    second: grfx_compassRose_61
+  - first:
+      213: 8609628667004384632
+    second: grfx_compassRose_62
+  - first:
+      213: 3197872286002356121
+    second: grfx_compassRose_63
+  - first:
+      213: 2457987859919817228
+    second: grfx_compassRose_64
+  - first:
+      213: 6031221258656595193
+    second: grfx_compassRose_65
+  - first:
+      213: -3560838306313689982
+    second: grfx_compassRose_66
+  - first:
+      213: 1979538936853690261
+    second: grfx_compassRose_67
+  - first:
+      213: 2234767325577007993
+    second: grfx_compassRose_68
+  - first:
+      213: 89363975996409599
+    second: grfx_compassRose_69
+  - first:
+      213: -7955902874059503132
+    second: grfx_compassRose_70
+  - first:
+      213: -5020849819453502035
+    second: grfx_compassRose_71
+  - first:
+      213: 287593734767283491
+    second: grfx_compassRose_72
+  - first:
+      213: 6322029212784935596
+    second: grfx_compassRose_73
+  - first:
+      213: -1344755582818702682
+    second: grfx_compassRose_74
+  - first:
+      213: -5396870532327624156
+    second: grfx_compassRose_75
+  - first:
+      213: -524275177609809542
+    second: grfx_compassRose_76
+  - first:
+      213: 5785533862432293485
+    second: grfx_compassRose_77
+  - first:
+      213: 1336345863441522844
+    second: grfx_compassRose_78
+  - first:
+      213: 5897549538455410943
+    second: grfx_compassRose_79
+  - first:
+      213: -6547137783264510912
+    second: grfx_compassRose_80
+  - first:
+      213: -1256126195445223746
+    second: grfx_compassRose_81
+  - first:
+      213: -7349224677217161039
+    second: grfx_compassRose_82
+  - first:
+      213: 5423101718510672408
+    second: grfx_compassRose_83
+  - first:
+      213: -1028446222497571709
+    second: grfx_compassRose_84
+  - first:
+      213: -8924192383134872027
+    second: grfx_compassRose_85
+  - first:
+      213: -6360526260510651509
+    second: grfx_compassRose_86
+  - first:
+      213: 7163955291491532460
+    second: grfx_compassRose_87
+  - first:
+      213: -2105241160596725186
+    second: grfx_compassRose_88
+  - first:
+      213: -1749441619351486830
+    second: grfx_compassRose_89
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grfx_compassRose_0
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 655
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a30cd44b60ae65c0800000000000000
+      internalID: -4220259418222361693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_1
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 651
+        width: 25
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f349f29f4c3a3bb00800000000000000
+      internalID: 843197621637977151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 674
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43fae7b5fd81d5810800000000000000
+      internalID: 1755586777336164148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 665
+        width: 16
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5b8e85ffd4decb0800000000000000
+      internalID: -4833121065995029086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 684
+        width: 11
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3df8d8aab96f9e0800000000000000
+      internalID: -1587910661779762259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_5
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 669
+        width: 7
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dbfd896f93e3280800000000000000
+      internalID: -9061741668933321351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_6
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 684
+        width: 11
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ffff1de27a0bec0800000000000000
+      internalID: -3553156286461772008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_7
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 665
+        width: 16
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00fe57b29269f9f0800000000000000
+      internalID: -434207506783342581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_8
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 674
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa70d183926eb2c20800000000000000
+      internalID: 3182890626376861610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_9
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 652
+        width: 25
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21cce39c16f40ff0800000000000000
+      internalID: -70661091529801430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_10
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 655
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9866f7faec49c1be0800000000000000
+      internalID: -1505164560020052343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_11
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 597
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46994ef076d11f360800000000000000
+      internalID: 7201569607627610468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 626
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585ba2a07d2686c70800000000000000
+      internalID: 8964523734009034117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_13
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 628
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d550ab76c4b259380800000000000000
+      internalID: -8965211876053351075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_14
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 589
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74185b8dde22e5ae0800000000000000
+      internalID: -1558770016085245625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_15
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 630
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dffe3b22f6d6dfd20800000000000000
+      internalID: 3313925224905568253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_16
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 628
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7a7d3ada5263220800000000000000
+      internalID: 2465199273740314570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_17
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 626
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b7489cf5dec7460800000000000000
+      internalID: 7240923296563493689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_18
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 597
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cff3352a5902aea0800000000000000
+      internalID: -5863113482107093050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 558
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ff359ee277ee460800000000000000
+      internalID: 7272881491616726942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_20
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 589
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fde58300392b0f60800000000000000
+      internalID: 8001534449148095990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_21
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 596
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778f886ab5485c1f0800000000000000
+      internalID: -1025267810986035081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_22
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 590
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bead75f14a74f9d0800000000000000
+      internalID: -2741431849451671881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_23
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 559
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59de33327eba0eb0800000000000000
+      internalID: -4752777059040831142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 515
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2168ca185f49d1510800000000000000
+      internalID: 1521536031284561426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_25
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 546
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34bb72514c4d24a70800000000000000
+      internalID: 8809837759723715395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_26
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 166
+        width: 394
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd20ad8d010e76c0800000000000000
+      internalID: -4143873449411990080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_27
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 546
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7706431cafd2ab0800000000000000
+      internalID: -5031089500988606530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_28
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 515
+        width: 52
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3881c17668d4b090800000000000000
+      internalID: -8019547101933238211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_29
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 497
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11336ddd955937130800000000000000
+      internalID: 3563355943386624785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_30
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 487
+        width: 34
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab0cc74cf4ac65d0800000000000000
+      internalID: -3067895842702881886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_31
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 501
+        width: 34
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c9e8d1bb9911b00800000000000000
+      internalID: 797587637955107846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_32
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 493
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b0189fcfed89f90800000000000000
+      internalID: -6946557247119881366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_33
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 498
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2bafb244ee50080800000000000000
+      internalID: -9221702685408185673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_34
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 466
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67059f10f6d97400800000000000000
+      internalID: 322525175144056683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_35
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 466
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7992ebfd0a1fcfd00800000000000000
+      internalID: 1007946089874991511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_36
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 444
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b5c82bc9eff51c0800000000000000
+      internalID: -4512608352638051566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_37
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 444
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb15278b8fd4b3e0800000000000000
+      internalID: -2038758940931187763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_38
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 413
+        width: 58
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e741f5f270cfdd7d0800000000000000
+      internalID: -2891878277912259458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_39
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 414
+        width: 58
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6168e78960479030800000000000000
+      internalID: 3501338057299747180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 42
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c76d349ab29bb130800000000000000
+      internalID: 3583619258551986120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_41
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 388
+        width: 43
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9ef995a246b46c0800000000000000
+      internalID: -4158119697891464722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 57
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f7204f85d6cdc50800000000000000
+      internalID: 6691343375184068408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_43
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 349
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7aadc9fe9b40d50800000000000000
+      internalID: 6702686584214038464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_44
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 356
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f01a92a49ddc72e0800000000000000
+      internalID: -2126581293572812553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_45
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 360
+        width: 58
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e8d0ecd2369e090800000000000000
+      internalID: -8004757814292672988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 328
+        width: 42
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056183eaa2a77d0a0800000000000000
+      internalID: -6856877583918164400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_47
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 328
+        width: 43
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff1e8c8f4b225b50800000000000000
+      internalID: 6580369626202251252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_48
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 297
+        width: 58
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ba57d20bd97a740800000000000000
+      internalID: 5163268877806054301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_49
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 297
+        width: 58
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7befb3443571bc5a0800000000000000
+      internalID: -6500075990784672073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_50
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 266
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1f3e6a6aed428b0800000000000000
+      internalID: -5177768864223333976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_51
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 266
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f1c5c5b8f366c50800000000000000
+      internalID: 6658078966896402273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_52
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 236
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a267070ffddbbf00800000000000000
+      internalID: 1133743818618135207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 222
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373ceb8ab19f8c5f0800000000000000
+      internalID: -736064641884568717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_54
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 217
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c686065f3d14a8500800000000000000
+      internalID: 399203895586351212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_55
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 236
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37450da672c564a0800000000000000
+      internalID: -6600655863876860100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_56
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 207
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ba3d8e4e23a32a0800000000000000
+      internalID: -6757032332175889574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_57
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 179
+        width: 52
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023ea205e9d2c1080800000000000000
+      internalID: -9215440579533806816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_58
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 204
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0192fd83c6a0342c0800000000000000
+      internalID: -4448700546985023216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_59
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 202
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995225891da4cbc80800000000000000
+      internalID: -8305681348713896551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_60
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 179
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41aff99802f17b6d0800000000000000
+      internalID: -2974874804246545900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_61
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 207
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a07879ccd05d720800000000000000
+      internalID: 2870215509885258346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_62
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 152
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875f0d828ab8b7770800000000000000
+      internalID: 8609628667004384632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_63
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 128
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f9c3ca6ef116c20800000000000000
+      internalID: 3197872286002356121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_64
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 127
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a4eb48fe68c1220800000000000000
+      internalID: 2457987859919817228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_65
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 152
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcb20ca7c333b350800000000000000
+      internalID: 6031221258656595193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_66
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 105
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284a1913d6c559ec0800000000000000
+      internalID: -3560838306313689982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_67
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 83
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597f73ecc2cb87b10800000000000000
+      internalID: 1979538936853690261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_68
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 103
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973daa4da0d730f10800000000000000
+      internalID: 2234767325577007993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_69
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 95
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff68bfc001c7d3100800000000000000
+      internalID: 89363975996409599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_70
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 90
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e98c2cfc74f69190800000000000000
+      internalID: -7955902874059503132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_71
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 100
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadc3e8d0bb525ab0800000000000000
+      internalID: -5020849819453502035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_72
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 83
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d8e606afcbdf300800000000000000
+      internalID: 287593734767283491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_73
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 104
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca240bfc21c5cb750800000000000000
+      internalID: 6322029212784935596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_74
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 64
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa2e581ce7765de0800000000000000
+      internalID: -1344755582818702682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_75
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 46
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422b6dd38d67a15b0800000000000000
+      internalID: -5396870532327624156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_76
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 32
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a713302f08669b8f0800000000000000
+      internalID: -524275177609809542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_77
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 20
+        width: 25
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62454215685a4050800000000000000
+      internalID: 5785533862432293485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_78
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 60
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90ae778b77ab8210800000000000000
+      internalID: 1336345863441522844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_79
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 20
+        width: 25
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff857e40f0e48d150800000000000000
+      internalID: 5897549538455410943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_80
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 31
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cfaf4dfd4e325a0800000000000000
+      internalID: -6547137783264510912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_81
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 46
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebeac6761e7519ee0800000000000000
+      internalID: -1256126195445223746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_82
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 63
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0bfeb081f420a90800000000000000
+      internalID: -7349224677217161039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_83
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 10
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a93a8b74ab24b40800000000000000
+      internalID: 5423101718510672408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_84
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 4
+        width: 17
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c907d0c993ab1f0800000000000000
+      internalID: -1028446222497571709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_85
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 10
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ecff75f46e62480800000000000000
+      internalID: -8924192383134872027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_86
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 0
+        width: 7
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b08b9c01fdab7a0800000000000000
+      internalID: -6360526260510651509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_87
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 0
+        width: 10
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caef120a16b7b6360800000000000000
+      internalID: 7163955291491532460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_88
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 4
+        width: 16
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32e918815ea8c2e0800000000000000
+      internalID: -2105241160596725186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grfx_compassRose_89
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 10
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29e354bbd1cb8b7e0800000000000000
+      internalID: -1749441619351486830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      grfx_compassRose_0: -4220259418222361693
+      grfx_compassRose_1: 843197621637977151
+      grfx_compassRose_10: -1505164560020052343
+      grfx_compassRose_11: 7201569607627610468
+      grfx_compassRose_12: 8964523734009034117
+      grfx_compassRose_13: -8965211876053351075
+      grfx_compassRose_14: -1558770016085245625
+      grfx_compassRose_15: 3313925224905568253
+      grfx_compassRose_16: 2465199273740314570
+      grfx_compassRose_17: 7240923296563493689
+      grfx_compassRose_18: -5863113482107093050
+      grfx_compassRose_19: 7272881491616726942
+      grfx_compassRose_2: 1755586777336164148
+      grfx_compassRose_20: 8001534449148095990
+      grfx_compassRose_21: -1025267810986035081
+      grfx_compassRose_22: -2741431849451671881
+      grfx_compassRose_23: -4752777059040831142
+      grfx_compassRose_24: 1521536031284561426
+      grfx_compassRose_25: 8809837759723715395
+      grfx_compassRose_26: -4143873449411990080
+      grfx_compassRose_27: -5031089500988606530
+      grfx_compassRose_28: -8019547101933238211
+      grfx_compassRose_29: 3563355943386624785
+      grfx_compassRose_3: -4833121065995029086
+      grfx_compassRose_30: -3067895842702881886
+      grfx_compassRose_31: 797587637955107846
+      grfx_compassRose_32: -6946557247119881366
+      grfx_compassRose_33: -9221702685408185673
+      grfx_compassRose_34: 322525175144056683
+      grfx_compassRose_35: 1007946089874991511
+      grfx_compassRose_36: -4512608352638051566
+      grfx_compassRose_37: -2038758940931187763
+      grfx_compassRose_38: -2891878277912259458
+      grfx_compassRose_39: 3501338057299747180
+      grfx_compassRose_4: -1587910661779762259
+      grfx_compassRose_40: 3583619258551986120
+      grfx_compassRose_41: -4158119697891464722
+      grfx_compassRose_42: 6691343375184068408
+      grfx_compassRose_43: 6702686584214038464
+      grfx_compassRose_44: -2126581293572812553
+      grfx_compassRose_45: -8004757814292672988
+      grfx_compassRose_46: -6856877583918164400
+      grfx_compassRose_47: 6580369626202251252
+      grfx_compassRose_48: 5163268877806054301
+      grfx_compassRose_49: -6500075990784672073
+      grfx_compassRose_5: -9061741668933321351
+      grfx_compassRose_50: -5177768864223333976
+      grfx_compassRose_51: 6658078966896402273
+      grfx_compassRose_52: 1133743818618135207
+      grfx_compassRose_53: -736064641884568717
+      grfx_compassRose_54: 399203895586351212
+      grfx_compassRose_55: -6600655863876860100
+      grfx_compassRose_56: -6757032332175889574
+      grfx_compassRose_57: -9215440579533806816
+      grfx_compassRose_58: -4448700546985023216
+      grfx_compassRose_59: -8305681348713896551
+      grfx_compassRose_6: -3553156286461772008
+      grfx_compassRose_60: -2974874804246545900
+      grfx_compassRose_61: 2870215509885258346
+      grfx_compassRose_62: 8609628667004384632
+      grfx_compassRose_63: 3197872286002356121
+      grfx_compassRose_64: 2457987859919817228
+      grfx_compassRose_65: 6031221258656595193
+      grfx_compassRose_66: -3560838306313689982
+      grfx_compassRose_67: 1979538936853690261
+      grfx_compassRose_68: 2234767325577007993
+      grfx_compassRose_69: 89363975996409599
+      grfx_compassRose_7: -434207506783342581
+      grfx_compassRose_70: -7955902874059503132
+      grfx_compassRose_71: -5020849819453502035
+      grfx_compassRose_72: 287593734767283491
+      grfx_compassRose_73: 6322029212784935596
+      grfx_compassRose_74: -1344755582818702682
+      grfx_compassRose_75: -5396870532327624156
+      grfx_compassRose_76: -524275177609809542
+      grfx_compassRose_77: 5785533862432293485
+      grfx_compassRose_78: 1336345863441522844
+      grfx_compassRose_79: 5897549538455410943
+      grfx_compassRose_8: 3182890626376861610
+      grfx_compassRose_80: -6547137783264510912
+      grfx_compassRose_81: -1256126195445223746
+      grfx_compassRose_82: -7349224677217161039
+      grfx_compassRose_83: 5423101718510672408
+      grfx_compassRose_84: -1028446222497571709
+      grfx_compassRose_85: -8924192383134872027
+      grfx_compassRose_86: -6360526260510651509
+      grfx_compassRose_87: 7163955291491532460
+      grfx_compassRose_88: -2105241160596725186
+      grfx_compassRose_89: -1749441619351486830
+      grfx_compassRose_9: -70661091529801430
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

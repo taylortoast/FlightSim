@@ -36,49 +36,47 @@ public class NavAutopilot : MonoBehaviour
         if (!plan || plan.waypoints == null || plan.waypoints.Length == 0) return;
         if (!targets || !aircraft) return;
 
-        // Active waypoint
-        Transform wp = plan.waypoints[Mathf.Clamp(activeIndex, 0, plan.waypoints.Length - 1)];
+        activeIndex = Mathf.Clamp(activeIndex, 0, plan.waypoints.Length - 1);
+        Transform wp = plan.waypoints[activeIndex];
 
-        // --- LEG DEFINITION ---
-        int prevIndex = Mathf.Max(activeIndex - 1, 0);
+        Vector3 P = aircraft.position; P.y = 0f;
+        Vector3 B = wp.position; B.y = 0f;
 
-        Vector3 A = plan.waypoints[prevIndex].position;
-        Vector3 B = wp.position;
-        Vector3 P = aircraft.position;
+        Vector3 toWp = B - P;
+        float dist = toWp.magnitude;
 
-        A.y = B.y = P.y = 0f;
+        float bearingToWp = Mathf.Atan2(toWp.x, toWp.z) * Mathf.Rad2Deg;
+        bearingToWp = (bearingToWp + 360f) % 360f;
 
-        Vector3 AB = B - A;
-        Vector3 AP = P - A;
+        float desiredHeading = bearingToWp; // DIRECT-TO by default
 
-        float dist = Vector3.Distance(P, B);
+        if (activeIndex > 0)
+        {
+            Vector3 A = plan.waypoints[activeIndex - 1].position; A.y = 0f;
+            Vector3 AB = B - A;
+            if (AB.sqrMagnitude > 1f)
+            {
+                Vector3 ABn = AB.normalized;
+                Vector3 AP = P - A;
+                float xtk = Vector3.Cross(ABn, AP).y;
 
-        Vector3 ABn = AB.normalized;
+                float courseHdg = Mathf.Atan2(ABn.x, ABn.z) * Mathf.Rad2Deg;
+                courseHdg = (courseHdg + 360f) % 360f;
 
-        // --- CROSS-TRACK ERROR (meters) ---
-        float xtk = Vector3.Cross(ABn, AP).y;
+                float intercept = Mathf.Clamp(xtk * xtkToInterceptDeg, -maxInterceptDeg, maxInterceptDeg);
+                desiredHeading = (courseHdg - intercept + 360f) % 360f;
+            }
+        }
 
-        // --- BASE COURSE HEADING ---
-        float courseHdg = Mathf.Atan2(ABn.x, ABn.z) * Mathf.Rad2Deg;
-        courseHdg = (courseHdg + 360f) % 360f;
+        if (navEngaged) targets.targetHeading = desiredHeading;
 
-        // --- INTERCEPT HEADING ---
-        float intercept =
-            Mathf.Clamp(xtk * xtkToInterceptDeg, -maxInterceptDeg, maxInterceptDeg);
+        // ND-friendly outputs: distance + bearing to active waypoint
+        activeDistance = dist;
+        activeBearing = bearingToWp;
 
-        float desiredHeading = (courseHdg - intercept + 360f) % 360f;
-
-        // targets.targetHeading = desiredHeading;
-        if (navEngaged)
-            targets.targetHeading = desiredHeading;
-
-
-        // --- SMART WAYPOINT CAPTURE ---
-        Vector3 forward = aircraft.forward;
-        forward.y = 0f;
-        forward.Normalize();
-
-        Vector3 dirToWp = (B - P).normalized;
+        // Smart capture (use direction to waypoint, not desiredHeading)
+        Vector3 forward = aircraft.forward; forward.y = 0f; forward.Normalize();
+        Vector3 dirToWp = (dist > 0.001f) ? (toWp / dist) : forward;
         float angleToWp = Vector3.Angle(forward, dirToWp);
 
         if (dist <= captureRadius && angleToWp <= forwardConeDeg)
@@ -88,11 +86,9 @@ public class NavAutopilot : MonoBehaviour
                 activeIndex = loop ? 0 : plan.waypoints.Length - 1;
         }
 
-        activeDistance = dist;
-        activeBearing = desiredHeading;
-
         Debug.DrawLine(aircraft.position, wp.position, Color.yellow);
     }
+
 
     public void SetNavEngaged(bool on)
     {

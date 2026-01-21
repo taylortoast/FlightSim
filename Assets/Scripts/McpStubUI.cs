@@ -24,7 +24,12 @@ public class McpStubUI : MonoBehaviour
 
         speed.onValueChanged.AddListener(v => { targets.targetSpeed = v; Refresh(); });
         altitude.onValueChanged.AddListener(v => { targets.targetAltitude = v; Refresh(); });
-        heading.onValueChanged.AddListener(v => { targets.targetHeading = v; Refresh(); });
+        heading.onValueChanged.AddListener(v =>
+        {
+            targets.targetHeading = Mathf.Repeat(v, 360f);
+            Refresh();
+        });
+
 
         Refresh();
     }

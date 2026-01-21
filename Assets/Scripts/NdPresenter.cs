@@ -29,12 +29,12 @@ public class NdPresenter : MonoBehaviour
         Vector3 p = aircraft.position;
 
         // Follow from above (position only; rotation stays Inspector-owned)
-        ndCamera.transform.position = new Vector3(p.x, p.y + 30f, p.z);
+        ndCamera.transform.position = new Vector3(p.x, p.y + 5000f, p.z);
 
         if (aircraftIcon)
         {
-            aircraftIcon.position = new Vector3(p.x, p.y + 10f, p.z);
-            aircraftIcon.rotation = Quaternion.Euler(00f, aircraft.eulerAngles.y, 0f);
+            aircraftIcon.position = new Vector3(p.x, p.y + 50f, p.z);
+            aircraftIcon.rotation = Quaternion.Euler(0f, aircraft.eulerAngles.y, 0f);
         }
 
     }
