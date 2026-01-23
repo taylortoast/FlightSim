@@ -18,18 +18,29 @@ public class McpStubUI : MonoBehaviour
     {
         if (!targets) return;
 
-        speed.value = targets.targetSpeed;
-        altitude.value = targets.targetAltitude;
-        heading.value = targets.targetHeading;
+        // Initialize sliders from SimTargets (aviation units)
+        speed.value = targets.targetIasKt;
+        altitude.value = targets.targetAltFtMsl;
+        heading.value = targets.targetHdgDeg;
 
-        speed.onValueChanged.AddListener(v => { targets.targetSpeed = v; Refresh(); });
-        altitude.onValueChanged.AddListener(v => { targets.targetAltitude = v; Refresh(); });
-        heading.onValueChanged.AddListener(v =>
+        // Bind slider changes back into SimTargets
+        speed.onValueChanged.AddListener(v =>
         {
-            targets.targetHeading = Mathf.Repeat(v, 360f);
+            targets.targetIasKt = v;
             Refresh();
         });
 
+        altitude.onValueChanged.AddListener(v =>
+        {
+            targets.targetAltFtMsl = v;
+            Refresh();
+        });
+
+        heading.onValueChanged.AddListener(v =>
+        {
+            targets.targetHdgDeg = Mathf.Repeat(v, 360f);
+            Refresh();
+        });
 
         Refresh();
     }
@@ -37,8 +48,9 @@ public class McpStubUI : MonoBehaviour
     void Refresh()
     {
         if (!targets) return;
-        if (speedLabel) speedLabel.text = $"SPD {targets.targetSpeed:0.0}";
-        if (altitudeLabel) altitudeLabel.text = $"ALT {targets.targetAltitude:0}";
-        if (headingLabel) headingLabel.text = $"HDG {targets.targetHeading:0}";
+
+        if (speedLabel) speedLabel.text = $"SPD {targets.targetIasKt:0}";
+        if (altitudeLabel) altitudeLabel.text = $"ALT {targets.targetAltFtMsl:0}";
+        if (headingLabel) headingLabel.text = $"HDG {targets.targetHdgDeg:0}";
     }
 }

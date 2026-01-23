@@ -3,30 +3,29 @@ using TMPro;
 
 public class HudDebug : MonoBehaviour
 {
-    public PlaneController plane;
+    public FlightDataBus bus;
     public SimTargets targets;
-    public TMP_Text text;
-    public NavAutopilot nav;
+    public TMP_Text hud;
 
-    static int HdgInt(float deg) => (int)Mathf.Repeat(deg + 0.5f, 360f);
+    public NavAutopilot nav;
 
     void Update()
     {
-        if (!plane || !targets || !text) return;
+        if (!hud) return;
 
-        var rb = plane.GetComponent<Rigidbody>();
-        float spd = rb.linearVelocity.magnitude;
-        float alt = rb.position.y;
+        if (!bus || !targets)
+        {
+            hud.text = $"HudDebug missing refs: bus={(bus ? "OK" : "NULL")} targets={(targets ? "OK" : "NULL")}";
+            return;
+        }
 
-        int hdgI = HdgInt(plane.transform.eulerAngles.y);
-        int tgtI = HdgInt(targets.targetHeading);
-
-        text.text =
-            $"SPD {spd:0.0} (T {targets.targetSpeed:0.0})\n" +
-            $"ALT {alt:0.0} (T {targets.targetAltitude:0.0})\n" +
-            $"HDG {hdgI} (T {tgtI})";
+        hud.text =
+            $"SPD {bus.ias:0} kt   (T {targets.targetIasKt:0} kt)\n" +
+            $"ALT {bus.alt:0} ft   (T {targets.targetAltFtMsl:0} ft)\n" +
+            $"HDG {bus.hdg:0}°     (T {targets.targetHdgDeg:0}°)\n" +
+            $"VSI {bus.vsi:0} fpm\n";
 
         if (nav)
-            text.text += $"\nWP {nav.activeIndex}  {nav.activeDistance:0}m  BRG {nav.activeBearing:0}";
+            hud.text += $"WP {nav.activeIndex}  {bus.dist:0}m  BRG {bus.brg:0}°";
     }
 }

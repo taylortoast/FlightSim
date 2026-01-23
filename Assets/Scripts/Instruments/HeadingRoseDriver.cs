@@ -19,7 +19,7 @@ public class HeadingRoseDriver : MonoBehaviour
     {
         if (!bus || !compassRose) return;
 
-        float targetZ = bus.hdg; // rose rotates opposite heading
+        float targetZ = Mathf.Repeat(bus.hdg, 360f);
         _roseZ = Mathf.LerpAngle(_roseZ, targetZ, 1f - Mathf.Exp(-smooth * Time.deltaTime));
         compassRose.localEulerAngles = new Vector3(0, 0, _roseZ);
 

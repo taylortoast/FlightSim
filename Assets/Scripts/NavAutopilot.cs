@@ -12,7 +12,7 @@ public class NavAutopilot : MonoBehaviour
 
     [Header("Nav")]
     public int activeIndex = 0;
-    public float captureRadius = 150f; // meters
+    public float captureRadius = 60f; // meters
     public bool loop = false;
 
     public float forwardConeDeg = 60f; // must be within +/- this angle to count as "ahead"
@@ -23,6 +23,18 @@ public class NavAutopilot : MonoBehaviour
     [Header("Mode")]
     public bool navEngaged = false; // when true, NAV drives targetHeading
 
+    [Header("Capture Robustness (v1)")]
+    public float nearRadiusMultiplier = 1.25f; // 150 * 1.25 = 187.5m "near"
+    public int minNearFrames = 3;              // require a few frames near before capturing
+
+    float prevDist = float.PositiveInfinity;
+    bool wasNear = false;
+    int nearFrames = 0;
+
+    static Vector3 Flat(Vector3 v) => Vector3.ProjectOnPlane(v, Vector3.up);
+
+
+
 
 
 
@@ -31,19 +43,34 @@ public class NavAutopilot : MonoBehaviour
         if (!plan) plan = GetComponent<FlightPlan>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
+
+
         if (!plan || plan.waypoints == null || plan.waypoints.Length == 0) return;
         if (!targets || !aircraft) return;
 
         activeIndex = Mathf.Clamp(activeIndex, 0, plan.waypoints.Length - 1);
         Transform wp = plan.waypoints[activeIndex];
 
-        Vector3 P = aircraft.position; P.y = 0f;
-        Vector3 B = wp.position; B.y = 0f;
+        Vector3 P = Flat(aircraft.position);
+        Vector3 B = Flat(wp.position);
+
 
         Vector3 toWp = B - P;
         float dist = toWp.magnitude;
+
+
+        float nearRadius = captureRadius * nearRadiusMultiplier;
+
+        if (dist <= nearRadius)
+        {
+            wasNear = true;
+            nearFrames++;
+        }
+
+
+
 
         float bearingToWp = Mathf.Atan2(toWp.x, toWp.z) * Mathf.Rad2Deg;
         bearingToWp = (bearingToWp + 360f) % 360f;
@@ -68,26 +95,38 @@ public class NavAutopilot : MonoBehaviour
             }
         }
 
-        if (navEngaged) targets.targetHeading = desiredHeading;
+        if (navEngaged) targets.targetHdgDeg = desiredHeading;
 
         // ND-friendly outputs: distance + bearing to active waypoint
         activeDistance = dist;
         activeBearing = bearingToWp;
 
         // Smart capture (use direction to waypoint, not desiredHeading)
-        Vector3 forward = aircraft.forward; forward.y = 0f; forward.Normalize();
-        Vector3 dirToWp = (dist > 0.001f) ? (toWp / dist) : forward;
-        float angleToWp = Vector3.Angle(forward, dirToWp);
+        Vector3 forward = Flat(aircraft.forward).normalized;
 
-        if (dist <= captureRadius && angleToWp <= forwardConeDeg)
+        Vector3 dirToWp = (dist > 0.001f) ? (toWp / dist) : forward;
+
+
+        bool movingAwayAfterNear = wasNear && nearFrames >= minNearFrames && dist > prevDist;
+        bool inRadius = dist <= captureRadius;
+
+        if (inRadius || movingAwayAfterNear)
         {
             activeIndex++;
             if (activeIndex >= plan.waypoints.Length)
                 activeIndex = loop ? 0 : plan.waypoints.Length - 1;
+
+            wasNear = false; nearFrames = 0; prevDist = float.PositiveInfinity;
         }
+        else
+        {
+            prevDist = dist;
+        }
+
 
         Debug.DrawLine(aircraft.position, wp.position, Color.yellow);
     }
+
 
 
     public void SetNavEngaged(bool on)
@@ -97,7 +136,7 @@ public class NavAutopilot : MonoBehaviour
         // When disengaging NAV, freeze the target to current heading
         // so we don’t “snap back” to some old value.
         if (!navEngaged && targets && aircraft)
-            targets.targetHeading = aircraft.eulerAngles.y;
+            targets.targetHdgDeg = aircraft.eulerAngles.y;
     }
 
     public void ToggleNav() => SetNavEngaged(!navEngaged);
