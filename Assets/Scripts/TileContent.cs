@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class TileContent : MonoBehaviour
 {
-    private MeshRenderer meshRenderer;
-
-    void Awake()
-    {
-        meshRenderer = GetComponent<MeshRenderer>();
-    }
+    [SerializeField] private MeshRenderer meshRenderer;
 
     public void SetTexture(Texture2D tex)
     {
+        if (meshRenderer == null)
+            meshRenderer = GetComponent<MeshRenderer>();
+
         meshRenderer.material.mainTexture = tex;
     }
 }

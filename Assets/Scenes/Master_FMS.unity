@@ -4656,7 +4656,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1796302380}
-  - component: {fileID: 1796302381}
   m_Layer: 0
   m_Name: GroundRoot
   m_TagString: Untagged
@@ -4679,22 +4678,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1603726616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1796302381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796302379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add4306e29c538d4f834dda54c39cc4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InfiniteTileGrid
-  aircraft: {fileID: 556070994}
-  tilePrefab: {fileID: 4271876229265541563, guid: 8e1b3bac7c4de2642ac5b41748129a3b, type: 3}
-  gridSize: 5
-  tileSize: 305
 --- !u!1 &1797350454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,6 +4876,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1853086886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853086888}
+  - component: {fileID: 1853086887}
+  m_Layer: 0
+  m_Name: RasterTileGrid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1853086887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853086886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7811dbd11fb07fd4b93dc6dedca1cb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RasterTileGridLoader
+  zoom: 12
+  centerX: 1033
+  centerY: 1628
+  gridRadius: 2
+  baseFolder: raster-tiles
+  tileSizeMeters: 256
+  tileMaterialTemplate: {fileID: 2100000, guid: 1c2caf2d45ed0e640befb51c9924c4c1, type: 2}
+  tilesParent: {fileID: 1796302380}
+--- !u!4 &1853086888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853086886}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858998914
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,3 +6085,4 @@ SceneRoots:
   - {fileID: 196761946}
   - {fileID: 1281267493}
   - {fileID: 1901936801}
+  - {fileID: 1853086888}
