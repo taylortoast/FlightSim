@@ -15,5 +15,7 @@ public class FollowAircraftCamera : MonoBehaviour
 
         // Lock rotation: straight down, north-aligned
         transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+        Debug.Log($"FollowAircraftCamera offset.y={offset.y:F1} camY={transform.position.y:F1} acY={(aircraft ? aircraft.position.y : -999):F1}");
+
     }
 }

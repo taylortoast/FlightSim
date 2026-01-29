@@ -41,8 +41,8 @@ public class NdPresenter : MonoBehaviour
             Vector3 pos = flightPlan.waypoints[i].position;
             routeLine.SetPosition(i, new Vector3(pos.x, pos.y, pos.z));
 
-            routeLine.startWidth = 0.5f;
-            routeLine.endWidth = 0.5f;
+            routeLine.startWidth = 30f;
+            routeLine.endWidth = 30f;
 
         }
     }

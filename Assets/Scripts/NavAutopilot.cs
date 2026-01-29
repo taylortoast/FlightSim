@@ -124,7 +124,7 @@ public class NavAutopilot : MonoBehaviour
         }
 
 
-        Debug.DrawLine(aircraft.position, wp.position, Color.yellow);
+        Debug.DrawLine(aircraft.position, wp.position, Color.black);
     }
 
 
