@@ -25,13 +25,15 @@ public class NDRangeStepper : MonoBehaviour
         Apply();
     }
 
-    public void OnPlus()  { if (idx < rangesNm.Length - 1) { idx++; Apply(); } }
+    public void OnPlus() { if (idx < rangesNm.Length - 1) { idx++; Apply(); } }
     public void OnMinus() { if (idx > 0) { idx--; Apply(); } }
+
+    public NDRangeState rangeState;
 
     void Apply()
     {
         int nm = rangesNm[idx];
-        tileGrid.SetNdRangeNm(nm);
+        rangeState.SetRangeNm(nm);
 
         bool canPlus = idx < rangesNm.Length - 1;
         bool canMinus = idx > 0;

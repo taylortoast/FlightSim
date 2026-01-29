@@ -39,6 +39,37 @@ public class LocalTileGrid : MonoBehaviour
     public bool lockRangeToZoom = true;            // 20NM→z14, 10NM→z13, 5NM→z12
     public int defaultRangeNm = 20;
 
+    public NDRangeState rangeState;
+    public float rebuildDelay = 0.1f;
+    Coroutine pending;
+
+    void OnEnable()
+    {
+        if (rangeState != null)
+            rangeState.OnRangeChanged += HandleRangeChanged;
+    }
+
+    void OnDisable()
+    {
+        if (rangeState != null)
+            rangeState.OnRangeChanged -= HandleRangeChanged;
+    }
+
+    void HandleRangeChanged(int nm)
+    {
+        if (pending != null) StopCoroutine(pending);
+        pending = StartCoroutine(RebuildAfterDelay(nm));
+    }
+
+    IEnumerator RebuildAfterDelay(int nm)
+    {
+        yield return new WaitForSeconds(rebuildDelay);
+        SetNdRangeNm(nm); // uses zoomOverride + Rebuild()
+        pending = null;
+    }
+
+
+
     IEnumerator Start()
     {
         // Timing fix: allow other systems (PlaneController/Awake, etc.) to settle.
@@ -82,8 +113,6 @@ public class LocalTileGrid : MonoBehaviour
         // Derive slippy-map tile indices from lat/lon (center tile).
         if (deriveCenterFromScenarioLatLon)
             LatLonToTileXY(scenario.centerLatDeg, scenario.centerLonDeg, z, out centerX, out centerY);
-
-        Debug.Log($"[LocalTileGrid] scenario='{scenario.name}' z={z} center=({centerX},{centerY}) tileSizeM={tileSizeM:F2}m tilesRootFolder='{tilesRootFolder}'");
     }
 
     void DestroyChildren()
@@ -116,44 +145,42 @@ public class LocalTileGrid : MonoBehaviour
         int missing = 0;
 
         for (int dx = -radius; dx <= radius; dx++)
-        for (int dy = -radius; dy <= radius; dy++)
-        {
-            int x = centerX + dx;
-            int y = centerY + dy;
-
-            // StreamingAssets/<tilesRootFolder>/<z>/<x>/<y>.png
-            string rel = Path.Combine(tilesRootFolder, z.ToString(), x.ToString(), y + ".png");
-            string path = Path.Combine(Application.streamingAssetsPath, rel);
-
-            if (!File.Exists(path))
+            for (int dy = -radius; dy <= radius; dy++)
             {
-                missing++;
-                continue;
+                int x = centerX + dx;
+                int y = centerY + dy;
+
+                // StreamingAssets/<tilesRootFolder>/<z>/<x>/<y>.png
+                string rel = Path.Combine(tilesRootFolder, z.ToString(), x.ToString(), y + ".png");
+                string path = Path.Combine(Application.streamingAssetsPath, rel);
+
+                if (!File.Exists(path))
+                {
+                    missing++;
+                    continue;
+                }
+
+                found++;
+
+                byte[] bytes = File.ReadAllBytes(path);
+                var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+                tex.LoadImage(bytes);
+
+                var go = GameObject.CreatePrimitive(PrimitiveType.Quad);
+                go.name = $"Tile_z{z}_{x}_{y}";
+                go.transform.SetParent(parent, true);
+                go.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+                go.transform.localScale = new Vector3(tileSizeM, tileSizeM, 1f);
+
+                // -dy keeps North-up alignment (slippy Y increases southward).
+                go.transform.position = origin + new Vector3(dx * tileSizeM, 0f, -dy * tileSizeM);
+
+                var mat = new Material(tileMatTemplate);
+                mat.mainTexture = tex;
+                go.GetComponent<MeshRenderer>().material = mat;
+
+                Destroy(go.GetComponent<Collider>());
             }
-
-            found++;
-
-            byte[] bytes = File.ReadAllBytes(path);
-            var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
-            tex.LoadImage(bytes);
-
-            var go = GameObject.CreatePrimitive(PrimitiveType.Quad);
-            go.name = $"Tile_z{z}_{x}_{y}";
-            go.transform.SetParent(parent, true);
-            go.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
-            go.transform.localScale = new Vector3(tileSizeM, tileSizeM, 1f);
-
-            // -dy keeps North-up alignment (slippy Y increases southward).
-            go.transform.position = origin + new Vector3(dx * tileSizeM, 0f, -dy * tileSizeM);
-
-            var mat = new Material(tileMatTemplate);
-            mat.mainTexture = tex;
-            go.GetComponent<MeshRenderer>().material = mat;
-
-            Destroy(go.GetComponent<Collider>());
-        }
-
-        Debug.Log($"[LocalTileGrid] BuildTiles complete. Found={found} Missing={missing}. streamingAssetsPath='{Application.streamingAssetsPath}'");
         if (found == 0)
         {
             Debug.LogError("[LocalTileGrid] Found 0 tiles. Most common causes: tilesRootFolder mismatch, wrong z (zoom), or centerX/centerY don't match exported tile set.");
