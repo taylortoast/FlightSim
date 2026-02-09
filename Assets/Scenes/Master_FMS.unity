@@ -290,7 +290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8932252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8932252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +475,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 20661493}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 4
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &20661493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,7 +966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 59724709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: u
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &59724709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,7 +1794,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 115278084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 8
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &115278084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3667,6 +3715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348894423}
+  - component: {fileID: 348894424}
   m_Layer: 0
   m_Name: Shared_IO
   m_TagString: Untagged
@@ -3695,6 +3744,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &348894424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348894422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5f555e59a1c0c4ca9b628d0c4d71b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FMS_Button_Selection
+  scratchpadText: {fileID: 1799817074}
+  maxChars: 24
+  forceUppercase: 1
 --- !u!1 &353490766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,7 +4724,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 443735456}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 6
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &443735456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4722,17 +4798,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461041920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1565891056}
   m_Father: {fileID: 1792562990}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 67.5}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &474509844
@@ -4936,7 +5012,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 489109575}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: b
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &489109575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5197,7 +5285,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 506003196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: p
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &506003196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5449,7 +5549,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515875928}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: d
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &515875928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6927,7 +7039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -32.8, y: -36.5}
+  m_AnchoredPosition: {x: -32.800003, y: -36.5}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596433522
@@ -6973,7 +7085,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 596433523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &596433523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7093,7 +7217,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 603287043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: m
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &603287043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8102,7 +8238,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 685877928}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: g
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &685877928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8801,7 +8949,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 771381224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnDegree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &771381224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8958,7 +9118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 790521260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &790521260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9645,6 +9817,42 @@ Transform:
   - {fileID: 378010713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &824674159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 824674160}
+  m_Layer: 5
+  m_Name: Needle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &824674160
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824674159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1356298140}
+  m_Father: {fileID: 974574658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 32.82}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &827749782
 GameObject:
   m_ObjectHideFlags: 0
@@ -10189,7 +10397,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 856306709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: y
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &856306709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10382,7 +10602,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 877477672}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: t
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &877477672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11208,7 +11440,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 946199528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: k
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &946199528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11553,6 +11797,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956066462}
   m_CullTransparentMesh: 1
+--- !u!1 &974574657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974574658}
+  m_Layer: 5
+  m_Name: Needie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &974574658
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974574657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 824674160}
+  m_Father: {fileID: 1116662321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1000, y: 0}
+  m_SizeDelta: {x: 600, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &975831815
 GameObject:
   m_ObjectHideFlags: 0
@@ -11634,7 +11914,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975831818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: r
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &975831818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11754,7 +12046,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 978437730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: z
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &978437730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12085,7 +12389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1001296296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: c
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1001296296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12705,7 +13021,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1045296253}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: h
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1045296253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12857,7 +13185,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1063467400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: r
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1063467400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13086,6 +13426,7 @@ RectTransform:
   - {fileID: 158234772}
   - {fileID: 1666634664}
   - {fileID: 121200017}
+  - {fileID: 974574658}
   - {fileID: 745762211}
   m_Father: {fileID: 1544164039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13207,7 +13548,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1128351142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: q
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1128351142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13327,7 +13680,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1134450866}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ' '
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1134450866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13681,7 +14046,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1154420618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1154420618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15219,10 +15596,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1418456095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 657}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268266752
 MonoBehaviour:
@@ -15677,7 +16054,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1320511000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 9
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1320511000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15872,7 +16261,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1333819390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: e
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1333819390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15992,7 +16393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1346956210}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: j
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1346956210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16030,6 +16443,143 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346956207}
+  m_CullTransparentMesh: 1
+--- !u!1 &1356298139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356298140}
+  - component: {fileID: 1356298142}
+  - component: {fileID: 1356298141}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1356298140
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356298139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 824674160}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -26, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1356298141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356298139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: ________
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 44222f0fc9b641b42a0c07124a3d95d9, type: 2}
+  m_sharedMaterial: {fileID: -5718945618707286458, guid: 44222f0fc9b641b42a0c07124a3d95d9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 67.9
+  m_fontSizeBase: 67.9
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 23
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1356298142
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356298139}
   m_CullTransparentMesh: 1
 --- !u!1 &1366782986
 GameObject:
@@ -16232,7 +16782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1372896183}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: a
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1372896183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16492,7 +17054,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 51, y: 732}
+  m_SizeDelta: {x: 55, y: 770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1420641780
 GameObject:
@@ -16611,7 +17173,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1427117810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: w
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1427117810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16906,7 +17480,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1489312459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: i
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1489312459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17163,7 +17749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1493655149}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1493655149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17622,10 +18220,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 461041921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 45, y: 192}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565891057
 MonoBehaviour:
@@ -18301,7 +18899,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1631576112}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: s
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1631576112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18421,7 +19031,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1640448303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: v
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1640448303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18957,7 +19579,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1685742066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: x
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1685742066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19424,7 +20058,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1707666369}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 7
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1707666369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19495,10 +20141,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1980159874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 45, y: 182}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734530614
 MonoBehaviour:
@@ -19619,7 +20265,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1783648951}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: n
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1783648951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19820,7 +20478,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792562989}
-  m_LocalRotation: {x: 0, y: 0, z: -0.8299636, w: 0.5578176}
+  m_LocalRotation: {x: 0, y: 0, z: -0.25291374, w: 0.9674889}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19828,11 +20486,11 @@ RectTransform:
   - {fileID: 461041921}
   - {fileID: 1980159874}
   m_Father: {fileID: 1531531635}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -112.19}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -29.3}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 490, y: 490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1796302379
 GameObject:
@@ -19990,17 +20648,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a89ad9822e4ad094f947a3cc21b5bcae, type: 2}
-  m_sharedMaterial: {fileID: -5718945618707286458, guid: a89ad9822e4ad094f947a3cc21b5bcae, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c93ce450f5c39cc4f8fbcc85f38a120e, type: 2}
+  m_sharedMaterial: {fileID: 3193201477835477899, guid: c93ce450f5c39cc4f8fbcc85f38a120e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294703483
-  m_fontColor: {r: 0.48235294, g: 0.9764706, b: 0.9843137, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20017,17 +20675,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 16
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 20
+  m_characterSpacing: 30
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -22024,17 +22682,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980159873}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1734530613}
   m_Father: {fileID: 1792562990}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -85.2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1988371576
@@ -22118,7 +22776,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1988371579}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: /
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1988371579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22979,7 +23649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2054394804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: l
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2054394804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23536,7 +24218,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2101783713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnPlusMinus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2101783713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23886,7 +24580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2140308747}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348894424}
+        m_TargetAssemblyTypeName: FMS_Button_Selection, Assembly-CSharp
+        m_MethodName: OnKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2140308747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23962,7 +24668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 9.03}
+  m_AnchoredPosition: {x: 0, y: -1188}
   m_SizeDelta: {x: 1130, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142190541
