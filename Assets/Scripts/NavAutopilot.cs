@@ -31,6 +31,24 @@ public class NavAutopilot : MonoBehaviour
     bool wasNear = false;
     int nearFrames = 0;
 
+    [Header("Advance Debounce")]
+    public float advanceCooldownSec = 0.5f;
+    float advanceCooldownT = 0f;
+
+
+
+    [Header("Turn Anticipation")]
+    [Tooltip("Enable turn anticipation (lead distance) so NAV begins the next leg before the waypoint on course changes.")]
+    public bool enableTurnAnticipation = true;
+
+    [Tooltip("Bank angle used for lead-distance computation (deg). Should match PlaneController maxBankDeg for realism.")]
+    public float anticipationBankDeg = 25f;
+
+    [Tooltip("Ignore tiny course changes below this value (deg).")]
+    public float minCourseChangeDeg = 10f;
+
+    [Tooltip("Clamp lead distance to avoid huge anticipations at high speed (meters).")]
+    public float maxLeadDistanceM = 2500f;
     static Vector3 Flat(Vector3 v) => Vector3.ProjectOnPlane(v, Vector3.up);
 
 
@@ -50,6 +68,9 @@ public class NavAutopilot : MonoBehaviour
         if (!plan || plan.waypoints == null || plan.waypoints.Length == 0) return;
         if (!targets || !aircraft) return;
 
+
+        if (advanceCooldownT > 0f)
+            advanceCooldownT -= Time.fixedDeltaTime;
         activeIndex = Mathf.Clamp(activeIndex, 0, plan.waypoints.Length - 1);
         Transform wp = plan.waypoints[activeIndex];
 
@@ -106,17 +127,77 @@ public class NavAutopilot : MonoBehaviour
 
         Vector3 dirToWp = (dist > 0.001f) ? (toWp / dist) : forward;
 
+        // Passed-waypoint detection (robust at high speed / tight turns):
+        // For leg A->B, if (B-P) · (B-A)^  < 0, we are beyond the plane through B perpendicular to the leg.
+        bool passedWaypoint = false;
+        if (activeIndex > 0)
+        {
+            Vector3 A2 = Flat(plan.waypoints[activeIndex - 1].position);
+            Vector3 AB2 = B - A2;
+            if (AB2.sqrMagnitude > 1f)
+            {
+                Vector3 ABn2 = AB2.normalized;
+                passedWaypoint = Vector3.Dot(toWp, ABn2) < 0f; // toWp = B - P
+            }
+        }
+
+        // Turn anticipation (lead distance): if a course change is coming, begin switching to the next leg
+        // before reaching the waypoint. Lead distance:
+        //   R = V^2 / (g * tan(phi_max))
+        //   lead = R * tan(deltaChi/2)
+        bool anticipateAdvance = false;
+        float leadDistanceM = 0f;
+        if (enableTurnAnticipation && advanceCooldownT <= 0f && activeIndex > 0 && activeIndex < plan.waypoints.Length - 1)
+        {
+            Vector3 A3 = Flat(plan.waypoints[activeIndex - 1].position);
+            Vector3 B3 = B; // active waypoint
+            Vector3 C3 = Flat(plan.waypoints[activeIndex + 1].position);
+
+            Vector3 inbound = (B3 - A3);
+            Vector3 outbound = (C3 - B3);
+
+            if (inbound.sqrMagnitude > 1f && outbound.sqrMagnitude > 1f)
+            {
+                inbound.Normalize();
+                outbound.Normalize();
+
+                // Course change angle (0..180)
+                float deltaChi = Vector3.Angle(inbound, outbound);
+
+                if (deltaChi >= minCourseChangeDeg)
+                {
+                    var rbTemp = aircraft.GetComponent<Rigidbody>();
+                    Vector3 v = rbTemp ? rbTemp.linearVelocity : Vector3.zero;
+                    float gs = new Vector2(v.x, v.z).magnitude;
+
+                    // If Rigidbody isn't present or speed is tiny, fall back to "no anticipation"
+                    if (gs > 0.5f)
+                    {
+                        float phi = Mathf.Max(1f, anticipationBankDeg) * Mathf.Deg2Rad; // prevent tan(0)
+                        float R = (gs * gs) / (9.81f * Mathf.Tan(phi));
+                        leadDistanceM = Mathf.Min(maxLeadDistanceM, R * Mathf.Tan(0.5f * deltaChi * Mathf.Deg2Rad));
+
+                        // Switch early when within lead distance of the waypoint
+                        anticipateAdvance = dist <= leadDistanceM;
+                    }
+                }
+            }
+        }
+
+
+
 
         bool movingAwayAfterNear = wasNear && nearFrames >= minNearFrames && dist > prevDist;
         bool inRadius = dist <= captureRadius;
 
-        if (inRadius || movingAwayAfterNear)
+        if ((inRadius || movingAwayAfterNear || passedWaypoint || anticipateAdvance) && advanceCooldownT <= 0f)
         {
             activeIndex++;
             if (activeIndex >= plan.waypoints.Length)
                 activeIndex = loop ? 0 : plan.waypoints.Length - 1;
 
             wasNear = false; nearFrames = 0; prevDist = float.PositiveInfinity;
+            advanceCooldownT = advanceCooldownSec;
         }
         else
         {
@@ -125,6 +206,7 @@ public class NavAutopilot : MonoBehaviour
 
 
         Debug.DrawLine(aircraft.position, wp.position, Color.black);
+
     }
 
 

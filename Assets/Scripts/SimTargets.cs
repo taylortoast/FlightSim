@@ -11,8 +11,8 @@ public class SimTargets : MonoBehaviour
     [Header("Guardrails (v1)")]
     public float minIasKt = 0f;
     public float maxIasKt = 450f;
-    public float minAltFt = -5.0f;
-    public float maxAltFt = 5000.0f;
+    public float minAltFt = 0.0f;
+    public float maxAltFt = 10000.0f;
     public float minHdgDeg = 0f;
     public float maxHdgDeg = 360f;
 

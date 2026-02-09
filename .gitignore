@@ -61,4 +61,8 @@ node_modules/
 *.diff
 *.patch
 *.orig
+*.pdf
 
+
+# Claude local settings
+.claude/settings.local.json
