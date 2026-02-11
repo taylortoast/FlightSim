@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88bb0e5f537600b469e137e77844f3b9, type: 3}
   m_Name: ScenarioDefinition
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioDefinition
+  scenarioTitle: Flight Scenario 01
+  scenarioDescription: "Scenario 02 consists of departure from KNPA to Visual route
+    1020 and lands at KVPS. \n\nOptional points are CEW, GPT, etc. \n\nOptional Dep/Apr
+    are RNAVs, ILS, etc. \n\nWould you like to load this Scenario?\r\n"
   centerLatDeg: 30.3
   centerLonDeg: -87.3
   baseZoom: 16
