@@ -11,16 +11,17 @@ using System.Collections;
 public class LocalTileGrid : MonoBehaviour
 {
     [Header("Scenario (authoritative)")]
-    public ScenarioDefinition scenario;            // assign in Inspector
+    // Optional fallback: normally provided at runtime via ScenarioRuntime.Set(...)
+    public ScenarioDefinition scenario;
     public int zoomOverride = -1;                  // -1 = use scenario.baseZoom (or range lock)
     public bool deriveCenterFromScenarioLatLon = true;
 
     [Header("Tile Index / Grid")]
-    public int z = 14;                             // will be overwritten by scenario / overrides
+    public int z = 14;                             // overwritten by scenario / overrides
     public int centerX = 0;
     public int centerY = 0;
     public int radius = 10;                        // (2r+1)^2 tiles
-    public float tileSizeM = 540f;                 // will be overwritten if scenario is assigned
+    public float tileSizeM = 540f;                 // overwritten if scenario is assigned
 
     [Header("Anchors")]
     public Transform anchor;                       // optional: AircraftRoot; uses XZ, forces Y=0
@@ -45,14 +46,29 @@ public class LocalTileGrid : MonoBehaviour
 
     void OnEnable()
     {
+        ScenarioRuntime.OnChanged += HandleScenarioChanged;
+
         if (rangeState != null)
             rangeState.OnRangeChanged += HandleRangeChanged;
     }
 
     void OnDisable()
     {
+        ScenarioRuntime.OnChanged -= HandleScenarioChanged;
+
         if (rangeState != null)
             rangeState.OnRangeChanged -= HandleRangeChanged;
+    }
+
+    void HandleScenarioChanged(ScenarioDefinition s)
+    {
+        scenario = s;
+
+        // Rebuild using current ND range contract (or scenario zoom if not locked).
+        if (lockRangeToZoom)
+            SetNdRangeNm(defaultRangeNm);
+        else
+            Rebuild();
     }
 
     void HandleRangeChanged(int nm)
@@ -68,12 +84,20 @@ public class LocalTileGrid : MonoBehaviour
         pending = null;
     }
 
-
-
     IEnumerator Start()
     {
         // Timing fix: allow other systems (PlaneController/Awake, etc.) to settle.
         yield return null;
+
+        // If ScenarioSelection already set a scenario before this scene finished loading:
+        if (scenario == null)
+            scenario = ScenarioRuntime.Current;
+
+        if (scenario == null)
+        {
+            Debug.LogWarning("[LocalTileGrid] No ScenarioDefinition assigned yet. Waiting for ScenarioRuntime.Set(...).");
+            yield break;
+        }
 
         if (lockRangeToZoom)
             SetNdRangeNm(defaultRangeNm);
@@ -113,6 +137,8 @@ public class LocalTileGrid : MonoBehaviour
         // Derive slippy-map tile indices from lat/lon (center tile).
         if (deriveCenterFromScenarioLatLon)
             LatLonToTileXY(scenario.centerLatDeg, scenario.centerLonDeg, z, out centerX, out centerY);
+
+        Debug.Log($"[LocalTileGrid] scenario='{scenario.name}' z={z} center=({centerX},{centerY}) tileSizeM={tileSizeM:F2}m");
     }
 
     void DestroyChildren()
@@ -181,9 +207,14 @@ public class LocalTileGrid : MonoBehaviour
 
                 Destroy(go.GetComponent<Collider>());
             }
+
         if (found == 0)
         {
             Debug.LogError("[LocalTileGrid] Found 0 tiles. Most common causes: tilesRootFolder mismatch, wrong z (zoom), or centerX/centerY don't match exported tile set.");
+        }
+        else
+        {
+            Debug.Log($"[LocalTileGrid] Built tiles: found={found}, missing={missing}, z={z}.");
         }
     }
 
@@ -201,7 +232,7 @@ public class LocalTileGrid : MonoBehaviour
     }
 
     /// <summary>
-    /// Contract: 20NM→z14, 10NM→z13, 5NM→z12 (since your current mbtiles maxzoom is 14).
+    /// Contract: 20NM→z14, 10NM→z13, 5NM→z12 (since your current tile set maxzoom is 14).
     /// This sets zoomOverride so ApplyScenario cannot overwrite the zoom.
     /// </summary>
     public void SetNdRangeNm(int rangeNm)

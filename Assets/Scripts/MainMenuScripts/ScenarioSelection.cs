@@ -14,6 +14,13 @@ public class ScenarioSelection : MonoBehaviour
     }
 
     public void SetPending(ScenarioDefinition def) => PendingScenario = def;
-    public void ConfirmPending() { SelectedScenario = PendingScenario; PendingScenario = null; }
+    public void ConfirmPending()
+    {
+        SelectedScenario = PendingScenario;
+        PendingScenario = null;
+
+        ScenarioRuntime.Set(SelectedScenario);
+    }
+
     public void ClearPending() => PendingScenario = null;
 }

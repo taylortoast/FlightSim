@@ -1488,7 +1488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bcb6e8db556a746b8143ee52be8169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioSelectButton
-  scenario: {fileID: 11400000, guid: 6b0a417b9494ac147b5b7874d297e0e8, type: 2}
+  scenario: {fileID: 11400000, guid: b07e892cf2f9ce64784bb149a482b26b, type: 2}
   confirmPanel: {fileID: 457693806}
 --- !u!1 &402856902
 GameObject:
@@ -3462,7 +3462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bcb6e8db556a746b8143ee52be8169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioSelectButton
-  scenario: {fileID: 11400000, guid: 6b0a417b9494ac147b5b7874d297e0e8, type: 2}
+  scenario: {fileID: 11400000, guid: 869c681b1253f424cac9c11fb3f69551, type: 2}
   confirmPanel: {fileID: 457693806}
 --- !u!1 &1476634418
 GameObject:
@@ -4090,7 +4090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bcb6e8db556a746b8143ee52be8169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioSelectButton
-  scenario: {fileID: 11400000, guid: 6b0a417b9494ac147b5b7874d297e0e8, type: 2}
+  scenario: {fileID: 11400000, guid: bfa771ccdb59b174e8a77acdb1c7c407, type: 2}
   confirmPanel: {fileID: 457693806}
 --- !u!1 &1674417792
 GameObject:
@@ -4328,7 +4328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bcb6e8db556a746b8143ee52be8169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioSelectButton
-  scenario: {fileID: 11400000, guid: 6b0a417b9494ac147b5b7874d297e0e8, type: 2}
+  scenario: {fileID: 11400000, guid: 57714959751f1fb44811a44741208a8a, type: 2}
   confirmPanel: {fileID: 457693806}
 --- !u!1 &1788527983
 GameObject:

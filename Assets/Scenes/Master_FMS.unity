@@ -20406,7 +20406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db2bac42443f64fa319771bf8718f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTileGrid
-  scenario: {fileID: 11400000, guid: 6b0a417b9494ac147b5b7874d297e0e8, type: 2}
+  scenario: {fileID: 0}
   zoomOverride: -1
   deriveCenterFromScenarioLatLon: 1
   z: 16

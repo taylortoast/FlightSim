@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bb0e5f537600b469e137e77844f3b9, type: 3}
+  m_Name: ScenarioDefinition01
+  m_EditorClassIdentifier: Assembly-CSharp::ScenarioDefinition
+  scenarioTitle: Flight Scenario 01
+  scenarioDescription: "Scenario 01 consists of departure from KNPA to Visual route
+    1020 and lands at KVPS. \n\nOptional points are CEW, GPT, etc. \n\nOptional Dep/Apr
+    are RNAVs, ILS, etc. \n\nWould you like to load this Scenario?\r\n"
+  centerLatDeg: 30.3
+  centerLonDeg: -87.3
+  baseZoom: 16
