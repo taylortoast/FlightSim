@@ -66,3 +66,11 @@ node_modules/
 
 # Claude local settings
 .claude/settings.local.json
+
+# Project-specific ignored folders
+/Assets/StreamingAssets/
+/Assets/_Recovery/
+/notes/
+/Recordings/
+/Temp/
+/Exports/

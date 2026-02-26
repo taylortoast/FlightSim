@@ -1,253 +1,281 @@
-using UnityEngine;
-using System;
-using System.IO;
 using System.Collections;
+using System.IO;
+using UnityEngine;
 
 /// <summary>
-/// Spawns a local grid of quad tiles from StreamingAssets, scaled in meters (1u = 1m).
-/// Tile scale is derived from scenario latitude + WebMercator meters-per-tile.
-/// Optionally derives the center tile X/Y from scenario lat/lon using Slippy Map math.
+/// Offline ND raster tile streamer.
+/// Reads: StreamingAssets/{tilesFolder}/{z}/{x}/{y}.png
+/// Places tiles in world meters (1 Unity unit = 1 meter) on the XZ plane (y=0).
+/// Pages tiles by updating the center (x,y) index as the focus point crosses tile boundaries.
 /// </summary>
 public class LocalTileGrid : MonoBehaviour
 {
-    [Header("Scenario (authoritative)")]
-    // Optional fallback: normally provided at runtime via ScenarioRuntime.Set(...)
+    [Header("References")]
+    [Tooltip("Parent transform that holds spawned tiles. Recommended: GroundRoot/TileContainer (Rot 0,0,0 / Scale 1,1,1).")]
+    public Transform tileParent;
+
+    [Tooltip("Aircraft transform (fallback focus if ndCamera is not set).")]
+    public Transform aircraft;
+
+    [Tooltip("ND camera that renders to the square ND RenderTexture (preferred for sizing + focus).")]
+    public Camera ndCamera;
+
+    [Tooltip("ScenarioDefinition providing center lat/lon.")]
     public ScenarioDefinition scenario;
-    public int zoomOverride = -1;                  // -1 = use scenario.baseZoom (or range lock)
-    public bool deriveCenterFromScenarioLatLon = true;
 
-    [Header("Tile Index / Grid")]
-    public int z = 14;                             // overwritten by scenario / overrides
-    public int centerX = 0;
-    public int centerY = 0;
-    public int radius = 10;                        // (2r+1)^2 tiles
-    public float tileSizeM = 540f;                 // overwritten if scenario is assigned
+    [Tooltip("Prefab: Quad (1x1) + TileContent component.")]
+    public GameObject tilePrefab;
 
-    [Header("Anchors")]
-    public Transform anchor;                       // optional: AircraftRoot; uses XZ, forces Y=0
-    public Transform tileParent;                   // optional; defaults to this.transform
+    [Header("Tile Source")]
+    [Tooltip("Folder under StreamingAssets containing z/x/y.png structure.")]
+    public string tilesFolder = "tiles_nd_dark_v1";
 
-    [Header("Rendering")]
-    public Material tileMatTemplate;               // Unlit/Texture
-    public bool destroyAndRebuild = true;
+    [Header("Paging / Coverage")]
+    [Range(0, 6)] public int bufferTiles = 3;
+    public float rebuildDelay = 0.05f;
+    public bool verboseLogs = true;
 
-    [Header("StreamingAssets Layout")]
-    // IMPORTANT: must match your folder under Assets/StreamingAssets/
-    // Example: Assets/StreamingAssets/tiles_nd_dark_v1/12/.., 13/.., 14/..
-    public string tilesRootFolder = "tiles_nd_dark_v1";
+    // ---- Public (used by other scripts) ----
+    [HideInInspector] public int z = 14;
+    [HideInInspector] public int radius = 10;
+    [HideInInspector] public float tileSizeM;
 
-    [Header("ND Range Lock (Prototype Contract)")]
-    public bool lockRangeToZoom = true;            // 20NM→z14, 10NM→z13, 5NM→z12
-    public int defaultRangeNm = 20;
+    // ---- Internals ----
+    int lastRangeNm = 20;
 
-    public NDRangeState rangeState;
-    public float rebuildDelay = 0.1f;
+    int scenarioCenterX, scenarioCenterY; // scenario center tile at current z
+    int centerX, centerY;                 // current paging center
+    int lastCenterX, lastCenterY;
+    bool hasLastCenter;
+
+    // World-space anchor for the scenario center tile (meters)
+    Vector3 scenarioOriginWorld;
+
     Coroutine pending;
 
-    void OnEnable()
+    void Start()
     {
-        ScenarioRuntime.OnChanged += HandleScenarioChanged;
-
-        if (rangeState != null)
-            rangeState.OnRangeChanged += HandleRangeChanged;
+        if (scenario != null) ApplyScenario();
     }
 
-    void OnDisable()
+    public void ApplyScenario()
     {
-        ScenarioRuntime.OnChanged -= HandleScenarioChanged;
+        if (!scenario) return;
 
-        if (rangeState != null)
-            rangeState.OnRangeChanged -= HandleRangeChanged;
+        // Anchor: if tileParent exists, treat its position as world origin for scenario center tile.
+        Transform p = tileParent ? tileParent : transform;
+        scenarioOriginWorld = new Vector3(p.position.x, 0f, p.position.z);
+
+        SetNdRangeNm(lastRangeNm);
     }
 
-    void HandleScenarioChanged(ScenarioDefinition s)
+    /// <summary>
+    /// Range → zoom mapping + coverage sizing based on ND camera frustum at ground (y=0),
+    /// using the ND RenderTexture aspect (square RT => aspect 1.0).
+    /// </summary>
+    public void SetNdRangeNm(int rangeNm)
     {
-        scenario = s;
+        if (!scenario) return;
 
-        // Rebuild using current ND range contract (or scenario zoom if not locked).
-        if (lockRangeToZoom)
-            SetNdRangeNm(defaultRangeNm);
-        else
-            Rebuild();
-    }
+        lastRangeNm = rangeNm;
 
-    void HandleRangeChanged(int nm)
-    {
-        if (pending != null) StopCoroutine(pending);
-        pending = StartCoroutine(RebuildAfterDelay(nm));
-    }
+        // Range → zoom mapping (your convention)
+        z = (rangeNm == 20) ? 13 :
+            (rangeNm == 10) ? 14 :
+            (rangeNm == 5)  ? 14 : z;
 
-    IEnumerator RebuildAfterDelay(int nm)
-    {
-        yield return new WaitForSeconds(rebuildDelay);
-        SetNdRangeNm(nm); // uses zoomOverride + Rebuild()
-        pending = null;
-    }
+        tileSizeM = WebMercator.MetersPerTile(scenario.centerLatDeg, z);
 
-    IEnumerator Start()
-    {
-        // Timing fix: allow other systems (PlaneController/Awake, etc.) to settle.
-        yield return null;
+        // Scenario center tile must be recomputed for THIS zoom
+        LatLonToTileXY(scenario.centerLatDeg, scenario.centerLonDeg, z, out scenarioCenterX, out scenarioCenterY);
 
-        // If ScenarioSelection already set a scenario before this scene finished loading:
-        if (scenario == null)
-            scenario = ScenarioRuntime.Current;
+        // ---- Frustum footprint sizing ----
+        float neededWidthM;
+        bool usedFallback = false;
 
-        if (scenario == null)
+        if (ndCamera != null)
         {
-            Debug.LogWarning("[LocalTileGrid] No ScenarioDefinition assigned yet. Waiting for ScenarioRuntime.Set(...).");
-            yield break;
+            float camH = Mathf.Abs(ndCamera.transform.position.y);
+            float aspect = 1f;
+            if (ndCamera.targetTexture != null && ndCamera.targetTexture.height > 0)
+                aspect = (float)ndCamera.targetTexture.width / ndCamera.targetTexture.height;
+
+            if (camH < 1f)
+            {
+                usedFallback = true;
+                neededWidthM = 2f * rangeNm * 1852f; // fallback
+            }
+            else
+            {
+                float halfH = Mathf.Tan(ndCamera.fieldOfView * Mathf.Deg2Rad * 0.5f) * camH;
+                float fullH = halfH * 2f;
+                float fullW = fullH * aspect;
+                neededWidthM = Mathf.Max(fullH, fullW);
+            }
+
+            if (verboseLogs)
+                Debug.Log($"[ND-Frustum] rtAspect={aspect:F3} camH={camH:F0} usedFallback={usedFallback} neededWidthM={neededWidthM:F0}");
+        }
+        else
+        {
+            neededWidthM = 2f * rangeNm * 1852f;
         }
 
-        if (lockRangeToZoom)
-            SetNdRangeNm(defaultRangeNm);
-        else
+        int neededAcross = Mathf.CeilToInt(neededWidthM / tileSizeM);
+        int tilesAcross = neededAcross + bufferTiles * 2;
+        if ((tilesAcross & 1) == 0) tilesAcross += 1; // odd
+        radius = (tilesAcross - 1) / 2;
+
+        RecomputeCenterFromFocus(forceResetLast: true);
+
+        if (verboseLogs)
+        {
+            float nominalWidthM = 2f * rangeNm * 1852f;
+            Debug.Log($"[ND-Tiles] range={rangeNm} z={z} tileSizeM={tileSizeM:F2} neededWidthM={neededWidthM:F0} nominalWidthM={nominalWidthM:F0} tilesAcross={tilesAcross} radius={radius}");
+        }
+
+        Rebuild();
+
+        if (usedFallback)
+    Rebuild(); // will rebuild again after rebuildDelay once camera height is updated
+    }
+
+    void Update()
+    {
+        if (!scenario || tileSizeM <= 0.1f) return;
+
+        Vector3 focus = GetFocusPos();
+        Vector3 d = focus - scenarioOriginWorld;
+
+        int offX = Mathf.RoundToInt(d.x / tileSizeM);
+        int offY = -Mathf.RoundToInt(d.z / tileSizeM); // Unity +Z north, slippy y increases south
+
+        int cx = scenarioCenterX + offX;
+        int cy = scenarioCenterY + offY;
+
+        if (!hasLastCenter)
+        {
+            centerX = cx; centerY = cy;
+            lastCenterX = cx; lastCenterY = cy;
+            hasLastCenter = true;
+            return;
+        }
+
+        if (cx != lastCenterX || cy != lastCenterY)
+        {
+            centerX = cx; centerY = cy;
+            lastCenterX = cx; lastCenterY = cy;
             Rebuild();
+        }
+    }
+
+    void RecomputeCenterFromFocus(bool forceResetLast)
+    {
+        Vector3 focus = GetFocusPos();
+        Vector3 d = focus - scenarioOriginWorld;
+
+        int offX = Mathf.RoundToInt(d.x / tileSizeM);
+        int offY = -Mathf.RoundToInt(d.z / tileSizeM);
+
+        centerX = scenarioCenterX + offX;
+        centerY = scenarioCenterY + offY;
+
+        if (forceResetLast)
+        {
+            lastCenterX = centerX;
+            lastCenterY = centerY;
+            hasLastCenter = true;
+        }
+    }
+
+    Vector3 GetFocusPos()
+    {
+        if (ndCamera != null) return ndCamera.transform.position;
+        if (aircraft != null) return aircraft.position;
+        return scenarioOriginWorld;
     }
 
     public void Rebuild()
     {
-        ApplyScenario();
+        if (pending != null) StopCoroutine(pending);
+        pending = StartCoroutine(RebuildAfterDelay());
+    }
 
-        if (destroyAndRebuild)
-            DestroyChildren();
-
+    IEnumerator RebuildAfterDelay()
+    {
+        yield return new WaitForSeconds(rebuildDelay);
         BuildTiles();
+        pending = null;
     }
 
-    void ApplyScenario()
+    void BuildTiles()
     {
-        // If no scenario, we can still spawn using inspector fields.
-        if (scenario == null)
-        {
-            Debug.LogWarning("[LocalTileGrid] No ScenarioDefinition assigned. Using inspector fields.");
-            return;
-        }
-
-        // Decide zoom:
-        // Priority: explicit zoomOverride -> range lock mapping -> scenario.baseZoom
-        if (zoomOverride >= 0)
-            z = zoomOverride;
-        else if (!lockRangeToZoom)
-            z = scenario.baseZoom;
-
-        // Meters-per-tile from latitude (Web Mercator).
-        tileSizeM = WebMercator.MetersPerTile(scenario.centerLatDeg, z);
-
-        // Derive slippy-map tile indices from lat/lon (center tile).
-        if (deriveCenterFromScenarioLatLon)
-            LatLonToTileXY(scenario.centerLatDeg, scenario.centerLonDeg, z, out centerX, out centerY);
-
-        Debug.Log($"[LocalTileGrid] scenario='{scenario.name}' z={z} center=({centerX},{centerY}) tileSizeM={tileSizeM:F2}m");
-    }
-
-    void DestroyChildren()
-    {
+        int found = 0, missing = 0;
         Transform parent = tileParent ? tileParent : transform;
 
         for (int i = parent.childCount - 1; i >= 0; i--)
             Destroy(parent.GetChild(i).gameObject);
-    }
 
-    public void BuildTiles()
-    {
-        if (tileMatTemplate == null)
+        if (verboseLogs)
         {
-            Debug.LogError("[LocalTileGrid] tileMatTemplate is not assigned.");
-            return;
+            int across = 2 * radius + 1;
+            Debug.Log($"[TilePaging] center=({centerX},{centerY}) z={z} rendered={across}x{across} range={lastRangeNm}NM");
         }
-
-        Transform parent = tileParent ? tileParent : transform;
-
-        // Anchor grid to the final aircraft/anchor position (XZ only), otherwise parent position.
-        Vector3 origin = parent.position;
-        if (anchor != null)
-        {
-            Vector3 a = anchor.position;
-            origin = new Vector3(a.x, 0f, a.z);
-        }
-
-        int found = 0;
-        int missing = 0;
 
         for (int dx = -radius; dx <= radius; dx++)
-            for (int dy = -radius; dy <= radius; dy++)
+        for (int dy = -radius; dy <= radius; dy++)
+        {
+            int x = centerX + dx;
+            int y = centerY + dy;
+
+            string path = Path.Combine(
+                Application.streamingAssetsPath,
+                tilesFolder,
+                z.ToString(),
+                x.ToString(),
+                y + ".png"
+            );
+
+            if (!File.Exists(path))
             {
-                int x = centerX + dx;
-                int y = centerY + dy;
+                missing++;
+                continue;
+            }
 
-                // StreamingAssets/<tilesRootFolder>/<z>/<x>/<y>.png
-                string rel = Path.Combine(tilesRootFolder, z.ToString(), x.ToString(), y + ".png");
-                string path = Path.Combine(Application.streamingAssetsPath, rel);
+            found++;
 
-                if (!File.Exists(path))
-                {
-                    missing++;
-                    continue;
-                }
+            GameObject go = Instantiate(tilePrefab, parent);
 
-                found++;
+            int dtx = x - scenarioCenterX;
+            int dty = y - scenarioCenterY;
 
+            go.transform.localScale = new Vector3(tileSizeM, tileSizeM, 1f);
+            go.transform.position = scenarioOriginWorld + new Vector3(dtx * tileSizeM, 0f, -dty * tileSizeM);
+            go.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+
+            go.name = $"tile z{z} {x}_{y}";
+
+            TileContent tc = go.GetComponent<TileContent>();
+            if (tc != null)
+            {
                 byte[] bytes = File.ReadAllBytes(path);
                 var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
                 tex.LoadImage(bytes);
-
-                var go = GameObject.CreatePrimitive(PrimitiveType.Quad);
-                go.name = $"Tile_z{z}_{x}_{y}";
-                go.transform.SetParent(parent, true);
-                go.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
-                go.transform.localScale = new Vector3(tileSizeM, tileSizeM, 1f);
-
-                // -dy keeps North-up alignment (slippy Y increases southward).
-                go.transform.position = origin + new Vector3(dx * tileSizeM, 0f, -dy * tileSizeM);
-
-                var mat = new Material(tileMatTemplate);
-                mat.mainTexture = tex;
-                go.GetComponent<MeshRenderer>().material = mat;
-
-                Destroy(go.GetComponent<Collider>());
+                tex.wrapMode = TextureWrapMode.Clamp;
+                tex.filterMode = FilterMode.Bilinear;
+                tc.SetTexture(tex);
             }
+        }
 
-        if (found == 0)
-        {
-            Debug.LogError("[LocalTileGrid] Found 0 tiles. Most common causes: tilesRootFolder mismatch, wrong z (zoom), or centerX/centerY don't match exported tile set.");
-        }
-        else
-        {
-            Debug.Log($"[LocalTileGrid] Built tiles: found={found}, missing={missing}, z={z}.");
-        }
+        Debug.Log($"[LocalTileGrid] scenario='{(scenario ? scenario.name : "null")}' z={z} center=({centerX},{centerY}) tileSizeM={tileSizeM:F2}m");
+        Debug.Log($"[LocalTileGrid] Built tiles: found={found}, missing={missing}, z={z}.");
     }
 
-    /// <summary>Converts lat/lon to slippy-map (x,y) tile indices at zoom z.</summary>
-    public static void LatLonToTileXY(double latDeg, double lonDeg, int z, out int x, out int y)
+    static void LatLonToTileXY(double latDeg, double lonDeg, int zoom, out int x, out int y)
     {
-        double latRad = latDeg * Math.PI / 180.0;
-        int n = 1 << z;
-
-        double xf = (lonDeg + 180.0) / 360.0 * n;
-        double yf = (1.0 - Math.Log(Math.Tan(latRad) + (1.0 / Math.Cos(latRad))) / Math.PI) / 2.0 * n;
-
-        x = Mathf.Clamp((int)Math.Floor(xf), 0, n - 1);
-        y = Mathf.Clamp((int)Math.Floor(yf), 0, n - 1);
-    }
-
-    /// <summary>
-    /// Contract: 20NM→z14, 10NM→z13, 5NM→z12 (since your current tile set maxzoom is 14).
-    /// This sets zoomOverride so ApplyScenario cannot overwrite the zoom.
-    /// </summary>
-    public void SetNdRangeNm(int rangeNm)
-    {
-        int mappedZ = rangeNm switch
-        {
-            20 => 14,
-            10 => 13,
-            5 => 12,
-            _ => z
-        };
-
-        z = mappedZ;
-        zoomOverride = mappedZ;
-
-        Rebuild();
+        double latRad = latDeg * Mathf.Deg2Rad;
+        int n = 1 << zoom;
+        x = (int)((lonDeg + 180.0) / 360.0 * n);
+        y = (int)((1.0 - System.Math.Log(System.Math.Tan(latRad) + 1.0 / System.Math.Cos(latRad)) / System.Math.PI) / 2.0 * n);
     }
 }

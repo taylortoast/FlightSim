@@ -19,3 +19,67 @@ MonoBehaviour:
   centerLatDeg: 30.3
   centerLonDeg: -87.3
   baseZoom: 16
+  waypoints:
+  - ident: KNPA
+    latDeg: 30.35
+    lonDeg: -87.32
+  - ident: TEEZY
+    latDeg: 30.18
+    lonDeg: -87.69
+  - ident: TRADR
+    latDeg: 30.3
+    lonDeg: -88.06
+  - ident: BFM
+    latDeg: 30.61
+    lonDeg: -88.06
+  - ident: VR1020_A
+    latDeg: 31
+    lonDeg: -88
+  - ident: VR1020_B
+    latDeg: 31.55
+    lonDeg: -87.52
+  - ident: VR1020_C
+    latDeg: 32.08
+    lonDeg: -87.4
+  - ident: VR1020_D
+    latDeg: 31.4
+    lonDeg: -86.73
+  - ident: VR1020_E
+    latDeg: 31.1
+    lonDeg: -86.57
+  - ident: CEW
+    latDeg: 30.83
+    lonDeg: -86.68
+  - ident: PENSI
+    latDeg: 30.79
+    lonDeg: -87.27
+  - ident: CUPER
+    latDeg: 30.17
+    lonDeg: -87.15
+  - ident: POOVE
+    latDeg: 30.32
+    lonDeg: -87.07
+  - ident: APUCE
+    latDeg: 30.42
+    lonDeg: -87.13
+  - ident: ALCOME
+    latDeg: 30.38
+    lonDeg: -87.22
+  prefillRouteIdents:
+  - KNPA
+  - TEEZY
+  - TRADR
+  - BFM
+  - VR1020_A
+  - VR1020_B
+  - VR1020_C
+  - VR1020_D
+  - VR1020_E
+  - CEW
+  - PENSI
+  - KNPA
+  rnav25LFixes:
+  - CUPER
+  - POOVE
+  - APUCE
+  - ALCOME

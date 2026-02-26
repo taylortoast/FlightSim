@@ -1,15 +1,23 @@
-using System;
 using UnityEngine;
+using System;
 
 public static class ScenarioRuntime
 {
-    public static event Action<ScenarioDefinition> OnChanged;
     public static ScenarioDefinition Current { get; private set; }
+    public static event Action<ScenarioDefinition> OnChanged;
 
     public static void Set(ScenarioDefinition scenario)
     {
         Current = scenario;
+
+        if (scenario != null)
+        {
+            if (ScenarioDefinitionValidator.Validate(scenario, out var rep))
+                Debug.Log(rep);
+            else
+                Debug.LogError(rep);
+        }
+
         OnChanged?.Invoke(Current);
-        Debug.Log($"[ScenarioRuntime] Selected: {(scenario ? scenario.name : "null")}");
     }
 }

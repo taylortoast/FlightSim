@@ -265,6 +265,5 @@ public class PlaneController : MonoBehaviour
         _hdgLogT = 0f;
 
         float err = Mathf.DeltaAngle(currentYaw, targetYaw);
-        Debug.Log($"[HDG] cur={currentYaw:F1} tgt={targetYaw:F1} err={err:F1} bank={bankDeg:F1} gs={groundSpeed:F1}");
     }
 }

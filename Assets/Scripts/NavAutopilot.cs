@@ -90,7 +90,7 @@ public class NavAutopilot : MonoBehaviour
             nearFrames++;
         }
 
-
+        if (plan == null || plan.waypoints == null || plan.waypoints.Length == 0) return;
 
 
         float bearingToWp = Mathf.Atan2(toWp.x, toWp.z) * Mathf.Rad2Deg;
